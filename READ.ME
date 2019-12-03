@@ -1,0 +1,36 @@
+This file provides a list of all python and bash scripts used in this thesis and a short explanation what they were used for. For detailed information see thesis and respective script files.
+
+OPTICAL CHARACTER RECOGNITION
+mergecsvfiles.sh		bash script that merges different .csv files that contain collection data to one .csv (mergedcsvfile.csv) file that contains all individual numbers and respective genera and 					species names.
+ocr.py				python script that uses OCR to recognize individual numbers in the images and write recognizes individual numbers into text files with '.spnr' suffix.
+evaluate_ocr.sh			bash script that lists all images in a text file (nomatchfile.txt) where ocr has not been successful to run ocr on them again by using ocr.py.
+idvnr_plausibility.py		python script that visualizes all images where certain conditions are not met in order to test if the recognized individual number is correct and to be able to correct it if not.
+
+
+LABEL IMAGES
+label_images.py			python script to find recognized individual numbers in collection data and add respective genera and species names to .spnr files.
+write_exifdata.py		python script to write recognizes individual numbers as well as genus and species names in exif data of the images.
+
+
+IMAGE SCALING AND DATA TRANSFORMATION
+xylabel_to_number.py 		python script to rescale images and to create data sets X, y and LabelToNumber for genera and species classification.
+xylabel_to_number_genus.py	python script to rescale images and to create data sets X, y and LabelToNumber for a specific (target) genus.
+
+
+CNN
+provision.sh			bash script to start instance on https://www.packet.com/ and install needed software.
+xception.py			python script to train xception CNN in basic version including data normalization, dividing into training-, validation- and test set and data augmentation.
+xception_transfer.py		python script to train xception CNN in transfer learning and balanced version including data normalization, dividing into training-, validation- and test set and data augmentation.
+onevssimilar_transfer.py	python script to train xception CNN in ransfer learning and balanced version on one vs. similar data sets including data normalization, dividing into training-, validation- and 					test set and data augmentation.
+plot_confusionmatrix.py		python script to plot heatmap of normalized confusion matrix.
+attribution.py			python script to calculate gradCAM and to show heatmaps and mis-classified images of one system.
+
+
+FIGURES
+inventory_exif.py		python script to get inventory of which genera and species are shown on the images and how many individuals there are per genus and species.
+plot_inventory_exif.py		python script to plot the inventory of what genera and species are shown on the images as shown in Figure 5.3.1
+phylogenetictree.py		python script to plot phylogenetic tree as shown in Figure 4.1.2
+
+
+
+
